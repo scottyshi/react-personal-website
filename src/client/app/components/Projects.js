@@ -48,7 +48,7 @@ var Projects = React.createClass({displayName:'Projects',
 			left: 0,
 			right: 0,
 			margin: 'auto',
-			marginBottom: 24
+			marginBottom: 75
 		}
 	},
 

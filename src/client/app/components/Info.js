@@ -92,7 +92,7 @@ var Info = React.createClass({displayName: 'Info',
 							</IconButton>
 						</a>	
 	
-						<a href="http://google.com" target="_blank">
+						<a href="./app/files/Resume.pdf" target="_blank">
 							<IconButton tooltip="Resume" style={this.iconbuttonStyle}>
 								<Attachment />
 							</IconButton>
