@@ -77,7 +77,7 @@ var Info = React.createClass({displayName: 'Info',
 				<div style={this.regionStyle}>
 					<h1 style={this.nameStyle}> Scott Shi </h1>
 					<Paper circle={true} style={this.portraitStyle} zDepth={3} >
-						<img style={this.imageStyle} src="./app/files/placeholder.jpg"/>
+						<img style={this.imageStyle} src="./app/files/profile.jpg"/>
 					</Paper>
 					<div style={this.buttondivStyle}>
 						<a href="https://github.com/scottyshi" target="_blank">

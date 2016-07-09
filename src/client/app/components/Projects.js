@@ -1,29 +1,36 @@
 import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
+import IconButton from 'material-ui/IconButton';
+import Code from 'material-ui/svg-icons/action/code';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 let tilesData = [
 	{
-		img: "./app/files/placeholder1.jpg",
-		title: "IU",
-		author: "IU's mom",
+		img: "./app/files/endpoints.png",
+		title: "Taxicab Trip Reduction",
+		author: "Used statistical methods of prediction to reduce distance travelled in between taxi trips",
+		src: "https://github.com/scottyshi/taxicab", 
 		featured: true,
 	},
 	{
-		img: "./app/files/placeholder2.gif",
-		title: "IU",
-		author: "IU's mom",
+		img: "./app/files/WHI.png",
+		title: "WHI Voice Recognition Research",
+		author: "Measuring similarity of speech utterances",
+		src: "https://github.com/scottyshi/WHI-Voice-Recognition-Research",
+	},
+	{
+		img: "./app/files/FPGAschematic.png",
+		title: "FPGA Digit Recognition",
+		author: "Logistic regression on a FPGA",
+		src: "https://github.com/scottyshi/FPGA_char_reg",
+		
 	},
 	{
 		img: "./app/files/placeholder3.gif",
-		title: "IU",
-		author: "IU's mom",
-	},
-	{
-		img: "./app/files/placeholder4.jpg",
-		title: "IU",
-		author: "IU's mom",
+		title: "M,N,K Game AI",
+		author: "Modifiable difficulty AI for the M,N,K game (in progress -- see github for (3,3,3) version",
+		src: "https://github.com/scottyshi/tic-tac-toe-ai",
 		featured: true,
 	},
 ];
@@ -43,7 +50,7 @@ var Projects = React.createClass({displayName:'Projects',
 			justifyContent: 'space-around',
 		},
 		gridList: {
-			width:550,
+			width: 650,
 			overflowY: 'auto',
 			left: 0,
 			right: 0,
@@ -71,8 +78,10 @@ var Projects = React.createClass({displayName:'Projects',
 							<GridTile
 								key={tile.img}
 								title={tile.title}
+								actionIcon={<IconButton linkButton={true} href={tile.src}><Code color="white" /></IconButton>}
+								actionPosition="left"
 								titlePosition="top"
-								subtitle={<span>by <b>{tile.author}</b></span>}
+								subtitle={<b>{tile.author}</b>}
 								titleBackground="linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
 								cols={tile.featured ? 2 : 1}
 								rows={tile.featured ? 2 : 1}>
