@@ -9,7 +9,7 @@ injectTapEventPlugin();
 
 let container = {
 	margin: '0',
-	height: '100%',
+	height: '210px',
 	width: '100%',
 	backgroundColor: '#003366'
 }
