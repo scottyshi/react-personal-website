@@ -1,6 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import IconButton from 'material-ui/IconButton';
+import TypeWriter from 'react-typewriter';
 
 import PermIdentity from 'material-ui/svg-icons/action/perm-identity';
 import Attachment from 'material-ui/svg-icons/file/attachment';
@@ -8,6 +9,19 @@ import Code from 'material-ui/svg-icons/action/code';
 import Work from 'material-ui/svg-icons/action/work';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+let delays = [{
+	at: 'r',
+	delay:1500
+},
+{
+	at: ':',
+	delay:1000
+},
+{
+	at:';',
+	delay: 500
+}];
 
 var Info = React.createClass({displayName: 'Info',
 	childContextTypes:{
@@ -29,7 +43,7 @@ var Info = React.createClass({displayName: 'Info',
 	},
 	regionStyle:{
 		height: '225px',
-		width: '250px',
+		width: '200px',
 		margin: 'auto',
 		left: 0,
 		right: 0,
@@ -38,9 +52,9 @@ var Info = React.createClass({displayName: 'Info',
 		textAlign: 'center'
 	},
 	nameStyle:{
-		marginTop: '25px',
+		marginTop: '5px',
 		marginBottom: '0px',
-		fontSize: '30px'
+		fontSize: '25px'
 	},
 	portraitStyle:{
 		height: '125px',
@@ -75,7 +89,9 @@ var Info = React.createClass({displayName: 'Info',
 		return(
 			<Paper style={this.paperStyle} zDepth={3} >
 				<div style={this.regionStyle}>
-					<h1 style={this.nameStyle}> Scott Shi </h1>
+					<TypeWriter delayMap={delays} typing={1}> 
+						<h1 style={this.nameStyle}>Scott Shi: Developer ;)</h1> 
+					</TypeWriter>
 					<Paper circle={true} style={this.portraitStyle} zDepth={3} >
 						<img style={this.imageStyle} src="./app/files/profile.jpg"/>
 					</Paper>

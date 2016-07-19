@@ -2,6 +2,7 @@ import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Code from 'material-ui/svg-icons/action/code';
+import Paper from 'material-ui/Paper';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -60,13 +61,23 @@ var Projects = React.createClass({displayName:'Projects',
 	},
 
 	projectsContainer : {
-		top: 400,
+		top: 0,
 		width: '100%',
 		position: 'absolute'
 	},
 
+	paperStyle:{
+		top: 400,
+		width: '100%',
+		margin: 'auto',
+		left: 0,
+		right: 0,
+		position: 'absolute',
+	},
+
 	render : function(){
 		return (
+			<Paper style={this.paperStyle} zDepth={10}>
 			<div style={this.projectsContainer}>
 				<div style={this.styles.root}>
 					<GridList
@@ -91,6 +102,7 @@ var Projects = React.createClass({displayName:'Projects',
 					</GridList>
 				</div>
 			</div>
+			</Paper>
 		);
 	}
 });
