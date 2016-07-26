@@ -89,7 +89,7 @@ var Projects = React.createClass({displayName:'Projects',
 							<GridTile
 								key={tile.img}
 								title={tile.title}
-								actionIcon={<IconButton linkButton={true} href={tile.src}><Code color="white" /></IconButton>}
+								actionIcon={<IconButton tooltip="Code" linkButton={true} href={tile.src}><Code color="white" /></IconButton>}
 								actionPosition="left"
 								titlePosition="top"
 								subtitle={<b>{tile.author}</b>}
