@@ -28,9 +28,9 @@ let tilesData = [
 		
 	},
 	{
-		img: "./app/files/placeholder3.gif",
+		img: "./app/files/mnk.gif",
 		title: "M,N,K Game AI",
-		author: "Modifiable difficulty AI for the M,N,K game (in progress -- see github for (3,3,3) version)",
+		author: "Modifiable difficulty AI for the M-N-K game (see link in 'Usage' from Github link '< >')",
 		src: "https://github.com/scottyshi/tic-tac-toe-ai",
 		featured: true,
 	},
